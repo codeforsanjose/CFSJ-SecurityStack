@@ -9,8 +9,8 @@
 
 
 ## Components
-### Splunk
 
+### Splunk
 
 Onboard hosts and connect them up to the main host
 
