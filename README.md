@@ -2,14 +2,24 @@
 
 # Security Stack @ Code For San Jose
 
-## Goals:
+## Goals
+
+To improve the security stance of projects and give recommendations for deployment
+
  - Audit existing apps built and partially maintained by Code for San Jose
  - Alerting for security-related events 
  - Provide metrics such as uptime and performance 
 
+## Getting Started
+
+**Splunk Instance: https://splunk.codeforsanjose.com:8000/en-GB**
+
+Request Access: Contact Splunk admin on the # security-stack channel in Slack
+A temporary passcode will be sent to your email. 
+
+Example Queries: 
 
 ## Components
-
 ### Splunk
 
 Onboard hosts and connect them up to the main host
