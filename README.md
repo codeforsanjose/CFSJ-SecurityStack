@@ -19,6 +19,9 @@ A temporary passcode will be sent to your email.
 
 Example Queries: 
 
+`index=main` 
+Make sure to specify the time range between 4 to 6 hours, this will lighten the load on the server and make sure that we do not exceed the maximum requests
+
 ## Components
 ### Splunk
 
