@@ -34,16 +34,9 @@ On the host where the web application is running:
 `
 2. `sudo dpkg -i splunk-8.0.0-1357bef0a7f6-linux-2.6-amd64.deb`
 3. `cd /opt/splunk/bin`
-4. `sudo ./splunk start`
-5. 
-
-
-sudo dpkg -i splunk-8.0.0-1357bef0a7f6-linux-2.6-amd64.deb
-
-cd /opt/splunk/bin 
-
-sudo ./splunk start
-
+4. `./splunk add monitor /var/log/`
+5. `splunk add forward-server 157.245.226.202:9997`
+6. `sudo ./splunk restart`
 
 ### Saltstack
 
@@ -53,4 +46,3 @@ Config control, automatic updates
 ### Terraform
 
 Deploy from Digital Ocean Droplets
-
