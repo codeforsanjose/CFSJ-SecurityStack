@@ -1,7 +1,9 @@
 # Security Stack @ Code For San Jose
-### Goals
-### Splunk
 
+ 1. Goals 
+ 2. Getting Started
+ 3. Splunk
+ 4. Static Code Analysis
 
 ## Goals
 
