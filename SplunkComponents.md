@@ -37,18 +37,19 @@ Config files get generated in /etc/letsencrypt/live/splunk.codeforsanjose.com/
 Moved letsencrypt files to splunk directory
 
 ** "/opt/splunk/etc/system/local/web.conf" ** 
-```[settings]
+`[settings]
 enableSplunkWebSSL = 1
 privKeyPath = /opt/splunk/etc/auth/splunk.codeforsanjose.com/privkey.pem
 caCertPath = /opt/splunk/etc/auth/splunk.codeforsanjose.com/fullchain.pem
-root_endpoint=/ ```
+root_endpoint=/ `
 
 
 ** "/opt/splunk/etc/system/local/server.conf" **
-``` ....
+` ....
 [proxyConfig]
 http_proxy = http://splunk.codeforsanjose.com:80
-https_proxy = https://splunk.codeforsanjose.com:443 .... ```
+https_proxy = https://splunk.codeforsanjose.com:443 ....
+`
 
 
 ## Nginx 
@@ -57,7 +58,7 @@ https_proxy = https://splunk.codeforsanjose.com:443 .... ```
 
 MAKE SURE YOU SPECIFY PROXY PASS CORRECTLY
 	
-``` server{
+` server{
 
         listen 443 ssl;
         listen [::]:443 ssl;
@@ -80,8 +81,7 @@ MAKE SURE YOU SPECIFY PROXY PASS CORRECTLY
                 proxy_pass https://splunk.codeforsanjose.com:8000;
                 auth_basic_user_file <LOCATION OF .ht FILE>;
         }
-````}
-`
+}`
 
 
 ## Firewall Rules
