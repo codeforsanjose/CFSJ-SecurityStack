@@ -3,10 +3,10 @@ Currently, Code For San Jose supports three live applications, Meal Tally, Open 
 with funding from Code For America.
 
 # COMPONENTS
-* Splunk: Download from Site
-* LetsEncrypt: For HTTPS encryption
-* Nginx: Reverse Proxy for Login
-* Firewall Rules (AWS): Restrict access to App
++ Splunk: Download from Site
++ LetsEncrypt: For HTTPS encryption
++ Nginx: Reverse Proxy for Login
++ Firewall Rules (AWS): Restrict access to App
 
 Splunk Community Edition does not have login features or users. However the workaround is to use Nginx Reverse Proxies and .htaccess. 
 
