@@ -81,7 +81,7 @@ server{
                 auth_basic_user_file <LOCATION OF .ht FILE>;
         }
 }
-
+`
 
 
 ## Firewall Rules
