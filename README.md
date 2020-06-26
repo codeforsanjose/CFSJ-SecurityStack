@@ -30,7 +30,7 @@ Example Queries:
 Make sure to specify the time range between 2 to 3 hours, this will lighten the load on the server and make sure that we do not exceed the maximum requests
 
 
-## Splunk Comoponents
+## Splunk Components
 
 **What Is It**
 
@@ -55,7 +55,9 @@ To onboard applications, you can either comment on the # security-stack channel,
 **Setup** 
 
 On the host where the web application is running: 
- 1. `wget -O splunk-8.0.0-1357bef0a7f6-linux-2.6-amd64.deb 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.0.0&product=splunk&filename=splunk-8.0.0-1357bef0a7f6-linux-2.6-amd64.deb&wget=true'
+
+
+1. `wget -O splunk-8.0.0-1357bef0a7f6-linux-2.6-amd64.deb 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.0.0&product=splunk&filename=splunk-8.0.0-1357bef0a7f6-linux-2.6-amd64.deb&wget=true'
 `
 2. `sudo dpkg -i splunk-8.0.0-1357bef0a7f6-linux-2.6-amd64.deb`
 3. `cd /opt/splunk/bin`
