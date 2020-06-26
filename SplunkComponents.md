@@ -12,7 +12,6 @@ The following can be modified to fit with any implementation of Splunk CE
 
 Splunk Community Edition does not have login features or users. However the workaround is to use Nginx Reverse Proxies and .htaccess. 
 
-## To access:
 https://splunk.codeforsanjose.com
 
 ## LetsEncrypt
@@ -51,3 +50,36 @@ root_endpoint=/ ```
 http_proxy = http://splunk.codeforsanjose.com:80
 https_proxy = https://splunk.codeforsanjose.com:443 .... ```
 
+
+## Nginx ##
+
+**/etc/nginx/conf.d/loginapp.conf**
+
+MAKE SURE YOU SPECIFY PROXY PASS CORRECTLY
+`
+server{
+
+        listen 443 ssl;
+        listen [::]:443 ssl;
+        server_name splunk.codeforsanjose.com www.splunk.codeforsanjose.com;
+
+        ssl_certificate /etc/letsencrypt/live/DIRECTORY/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/DIRECTORY/privkey.pem;
+
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+
+        ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+        ssl_prefer_server_ciphers on;
+        ssl_stapling on;
+        ssl_stapling_verify on;
+        #return 301 http://$host$request_uri;
+        auth_basic_user_file <LOCATION OF .ht FILE>
+        auth_basic "Splunk App";
+        location / {
+                auth_basic "Splunk App";
+                proxy_pass https://splunk.codeforsanjose.com:8000;
+                auth_basic_user_file <LOCATION OF .ht FILE>;
+        }
+}
+
+`
