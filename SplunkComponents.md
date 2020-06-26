@@ -14,28 +14,22 @@ Splunk Community Edition does not have login features or users. However the work
 
 #### To access:
 https://splunk.codeforsanjose.com
-note: you must use httpS in order to be redirected to the login prompt
-
-![To Hit the Webpage](/splunk/SplunkLogin1.png)
-
-You will be prompted by your browser for a user login. Please contact #security-stack on the Slack channel to get credentials
-![To Hit the Webpage](/splunk/SplunkLogin3.png)
 
 #### LetsEncrypt
 
 Config files get generated in /etc/letsencrypt/live/splunk.codeforsanjose.com/
 
-``` sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
+` sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
 
-``` cd /opt/letsencrypt/
+` cd /opt/letsencrypt/
 
-``` ./letsencrypt-auto certonly --standalone
+` ./letsencrypt-auto certonly --standalone
 
 *** TO RENEW ***
 
-sudo service nginx stop
- ./certbot-auto renew
+` sudo service nginx stop
+` ./certbot-auto renew
 
-root@splunk2:/opt/letsencrypt# ./letsencrypt-auto renew
+` /opt/letsencrypt$ ./letsencrypt-auto renew
 
-ubuntu@ip-172-31-19-21:/opt/letsencrypt$ ./letsencrypt-auto certonly --standalone
+` /opt/letsencrypt$ ./letsencrypt-auto certonly --standalone
