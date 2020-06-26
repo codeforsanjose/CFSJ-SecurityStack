@@ -12,10 +12,10 @@ The following can be modified to fit with any implementation of Splunk CE
 
 Splunk Community Edition does not have login features or users. However the workaround is to use Nginx Reverse Proxies and .htaccess. 
 
-#### To access:
+## To access:
 https://splunk.codeforsanjose.com
 
-#### LetsEncrypt
+## LetsEncrypt
 
 Config files get generated in /etc/letsencrypt/live/splunk.codeforsanjose.com/
 
@@ -34,7 +34,7 @@ Config files get generated in /etc/letsencrypt/live/splunk.codeforsanjose.com/
 
 ` /opt/letsencrypt$ ./letsencrypt-auto certonly --standalone`
 
-#### Splunk Config
+## Splunk Config
 Moved letsencrypt files to splunk directory
 
 ** "/opt/splunk/etc/system/local/web.conf" ** 
