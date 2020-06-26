@@ -10,8 +10,11 @@ with funding from Code For America.
 
 Splunk Community Edition does not have login features or users. However the workaround is to use Nginx Reverse Proxies and .htaccess. 
 
-##### To access:
+#### To access:
 https://splunk.codeforsanjose.com
 note: you must use httpS in order to be redirected to the login prompt
 
+![To Hit the Webpage](/splunk/SplunkLogin1.png)
+
 You will be prompted by your browser for a user login. Please contact #security-stack on the Slack channel to get credentials
+![To Hit the Webpage](/splunk/SplunkLogin3.png)
