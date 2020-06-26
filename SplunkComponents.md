@@ -56,8 +56,8 @@ https_proxy = https://splunk.codeforsanjose.com:443 .... ```
 **/etc/nginx/conf.d/loginapp.conf**
 
 MAKE SURE YOU SPECIFY PROXY PASS CORRECTLY
-`
-server{
+	
+``` server{
 
         listen 443 ssl;
         listen [::]:443 ssl;
@@ -80,7 +80,7 @@ server{
                 proxy_pass https://splunk.codeforsanjose.com:8000;
                 auth_basic_user_file <LOCATION OF .ht FILE>;
         }
-}
+````}
 `
 
 
