@@ -36,6 +36,9 @@ Make sure to specify the time range between 2 to 3 hours, this will lighten the 
 
 Splunk is basically a log collector. It's where sysadmins and security analysts can correlate system logs from web apps and hosts to identify significant events.
 
+Currently, Code For San Jose supports three live applications, Meal Tally, Open Disclosure, and Disaster Response 
+with funding from Code For America.
+
 Splunk Community Edition does not have login features or users. However the workaround is to use Nginx Reverse Proxies and .htaccess. 
 
 #### To access:

@@ -1,9 +1,11 @@
 Splunk is a log file aggregator designed to monitor logfiles forwarded from hosts. 
-Currently, Code For San Jose supports three live applications, Meal Tally, Open Disclosure, and Disaster Response 
-with funding from Code For America.
+
+This page is for a more in depth overview on the technical details for setup
+
+The following can be modified to fit with any implementation of Splunk CE
 
 # COMPONENTS
-+ Splunk: Download from Site
++ Splunk CE: Download from Site
 + LetsEncrypt: For HTTPS encryption
 + Nginx: Reverse Proxy for Login
 + Firewall Rules (AWS): Restrict access to App
@@ -18,3 +20,22 @@ note: you must use httpS in order to be redirected to the login prompt
 
 You will be prompted by your browser for a user login. Please contact #security-stack on the Slack channel to get credentials
 ![To Hit the Webpage](/splunk/SplunkLogin3.png)
+
+#### LetsEncrypt
+
+Config files get generated in /etc/letsencrypt/live/splunk.codeforsanjose.com/
+
+``` sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
+
+``` cd /opt/letsencrypt/
+
+``` ./letsencrypt-auto certonly --standalone
+
+*** TO RENEW ***
+
+sudo service nginx stop
+ ./certbot-auto renew
+
+root@splunk2:/opt/letsencrypt# ./letsencrypt-auto renew
+
+ubuntu@ip-172-31-19-21:/opt/letsencrypt$ ./letsencrypt-auto certonly --standalone
