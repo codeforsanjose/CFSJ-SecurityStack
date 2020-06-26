@@ -25,7 +25,7 @@ Config files get generated in /etc/letsencrypt/live/splunk.codeforsanjose.com/
 
 ` ./letsencrypt-auto certonly --standalone `
 
-*** TO RENEW ***
+**TO RENEW**
 
 ` sudo service nginx stop`
 ` ./certbot-auto renew `
@@ -33,3 +33,21 @@ Config files get generated in /etc/letsencrypt/live/splunk.codeforsanjose.com/
 ` /opt/letsencrypt$ ./letsencrypt-auto renew`
 
 ` /opt/letsencrypt$ ./letsencrypt-auto certonly --standalone`
+
+#### Splunk Config
+Moved letsencrypt files to splunk directory
+
+** "/opt/splunk/etc/system/local/web.conf" ** 
+```[settings]
+enableSplunkWebSSL = 1
+privKeyPath = /opt/splunk/etc/auth/splunk.codeforsanjose.com/privkey.pem
+caCertPath = /opt/splunk/etc/auth/splunk.codeforsanjose.com/fullchain.pem
+root_endpoint=/ ```
+
+
+** "/opt/splunk/etc/system/local/server.conf" **
+``` ....
+[proxyConfig]
+http_proxy = http://splunk.codeforsanjose.com:80
+https_proxy = https://splunk.codeforsanjose.com:443 .... ```
+

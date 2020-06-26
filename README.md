@@ -67,3 +67,5 @@ On the host where the web application is running:
 4. `./splunk add monitor /var/log/`
 5. `splunk add forward-server 54.241.132.254:9997`
 6. `sudo ./splunk restart`
+
+
