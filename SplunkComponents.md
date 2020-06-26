@@ -19,17 +19,17 @@ https://splunk.codeforsanjose.com
 
 Config files get generated in /etc/letsencrypt/live/splunk.codeforsanjose.com/
 
-``` sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
+` sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt`
 
- cd /opt/letsencrypt/
+` cd /opt/letsencrypt/ `
 
- ./letsencrypt-auto certonly --standalone ```
+` ./letsencrypt-auto certonly --standalone `
 
 *** TO RENEW ***
 
-` sudo service nginx stop
-` ./certbot-auto renew
+` sudo service nginx stop`
+` ./certbot-auto renew `
 
-` /opt/letsencrypt$ ./letsencrypt-auto renew
+` /opt/letsencrypt$ ./letsencrypt-auto renew`
 
-` /opt/letsencrypt$ ./letsencrypt-auto certonly --standalone
+` /opt/letsencrypt$ ./letsencrypt-auto certonly --standalone`
