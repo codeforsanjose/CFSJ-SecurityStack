@@ -51,7 +51,7 @@ http_proxy = http://splunk.codeforsanjose.com:80
 https_proxy = https://splunk.codeforsanjose.com:443 .... ```
 
 
-## Nginx ##
+## Nginx 
 
 **/etc/nginx/conf.d/loginapp.conf**
 
@@ -82,4 +82,22 @@ server{
         }
 }
 
+
+
+## Firewall Rules
+
+There are various ways to do this but primarily you only want the ip address itself to be able to access the application 
+For Non-AWS instances, use IPTables
+For AWS, you can edit the inbound rules as follows
+
+HTTP	TCP	80	0.0.0.0/0	Allow for Web Traffic
+
+Custom TCP	TCP	8000	54.241.132.254/32	Allow for Splunk Console access
+
+HTTPS	TCP	443	0.0.0.0/0	Allow for SSL Web Traffic
+
+Set it to only allow port 8000 traffic from itself, remember we're working with a reverse proxy
+
+
+![FW](/splunk/Splunk-aws-fw-rules.png)
 `
