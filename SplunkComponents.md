@@ -38,11 +38,11 @@ Moved letsencrypt files to splunk directory
 
 ** "/opt/splunk/etc/system/local/web.conf" ** 
 
-```[settings]
+`[settings]
 enableSplunkWebSSL = 1
 privKeyPath = /opt/splunk/etc/auth/splunk.codeforsanjose.com/privkey.pem
 caCertPath = /opt/splunk/etc/auth/splunk.codeforsanjose.com/fullchain.pem
-root_endpoint=/ ```
+root_endpoint=/ `
 
 
 ** "/opt/splunk/etc/system/local/server.conf" **
